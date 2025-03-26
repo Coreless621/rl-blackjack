@@ -10,7 +10,7 @@ alpha = 0.01
 gamma = 0.99
 epsilon = 1.0
 min_epsilon = 0.1
-num_episodes = 1000000
+num_episodes = 1_000_000
 decay = (min_epsilon / epsilon) ** (1 / num_episodes)
 
 # Default Q-values
@@ -22,6 +22,8 @@ env = gym.make("Blackjack-v1", sab=True)
 q_values = defaultdict(default_q_values)
 
 episode_rewards = []
+
+# training loop
 for episode in tqdm(range(num_episodes)):
     done = False
     state, _ = env.reset()
