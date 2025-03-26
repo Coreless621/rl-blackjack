@@ -20,7 +20,7 @@ The agent learns to play the simplified Blackjack card game using tabular Q-lear
 - **Learning type:** Tabular Q-learning with `defaultdict`
 - **Exploration:** Epsilon-greedy with exponential decay
 - **Update rule:**  
-  \( Q(s, a) \leftarrow Q(s, a) + \alpha [r + \gamma \cdot \max_a Q(s', a) - Q(s, a)] \)
+   Q(s, a) -> Q(s, a) + alpha [r + gamma * max Q(s', a) - Q(s, a)
 - **Episode length:** Until terminal Blackjack game outcome
 
 ---
